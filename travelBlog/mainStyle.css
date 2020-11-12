@@ -1,0 +1,224 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+section{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+/*--------------------------------HEADER FOTO--------------------------------*/
+
+.p1background{
+	position: absolute;
+	/* width: 100%; */
+	/* height: 100%; */
+	bottom: -300px;
+	left: 0;
+	z-index: 1;
+}
+
+.p1middle{
+	position: absolute;
+	/* width: 100%; */
+	/* height: 100%; */
+	bottom: -300px;
+	left: 0;
+	z-index: 2;
+}
+.p1foreground{
+	position: absolute;
+	/* width: 100%; */
+	/* height: 100%; */
+	bottom: -300px;
+	left: 0;
+	z-index: 3;
+}
+
+.p1bg{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/*--------------------------------SECTION1 FOTO-------------------------------*/
+
+.p2background{
+	position: absolute;
+	height: 100%;
+	bottom: 0px;
+	z-index: 1;
+}
+
+.p2middle{
+	position: absolute;
+	height: 100%;
+	bottom: 0px;
+	z-index: 2;
+}
+.p2foreground{
+	position: absolute;
+	height: 100%;
+	bottom: 53px;
+	z-index: 3;
+}
+
+.p2bg{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/*--------------------------------FIRST SECTION-------------------------------*/
+
+section{
+	width: 100%;
+	background-color: #D8D6D9;
+	position: relative;
+}
+
+section .container{
+	padding: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.foto{
+	overflow: hidden;
+}
+/* section .container > *{
+	margin: 2rem;
+} */
+
+.title{
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	padding-bottom: .5rem;
+	position: relative;
+}
+
+.shadow{
+	position: absolute;
+	bottom: 0%;
+	height: 300px;
+	width: 100%;
+	z-index: 20;
+	background: linear-gradient(to top, black, transparent);
+}
+
+/*-----------------------------------SCALABLE-------------------------------- */
+
+@media (max-width: 1600px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -350px;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -350px;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: 0px;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 1300px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: -320px;
+		right: auto;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: -320px;
+		right: auto;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: 0px;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 950px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -680px;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -680px;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -1000px;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 500px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: -780px;
+		right: auto;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: -780px;
+		right: auto;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -1000px;
+		z-index: 3;
+	}
+}
