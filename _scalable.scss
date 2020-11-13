@@ -1,0 +1,97 @@
+@media (max-width: 1600px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -350px;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -350px;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: 0px;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 1300px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: -320px;
+		right: auto;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: -320px;
+		right: auto;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: 0px;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 950px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -680px;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -680px;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -1000px;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 500px){
+	.p1background{
+		position: absolute;
+		bottom: -300px;
+		left: -780px;
+		right: auto;
+		z-index: 1;
+	}
+	
+	.p1middle{
+		position: absolute;
+		bottom: -300px;
+		left: -780px;
+		right: auto;
+		z-index: 2;
+	}
+	.p1foreground{
+		position: absolute;
+		bottom: -300px;
+		left: auto;
+		right: -1000px;
+		z-index: 3;
+	}
+}
