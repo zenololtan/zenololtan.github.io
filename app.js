@@ -8,9 +8,6 @@ window.addEventListener('scroll', () =>{
 		scroll -= 986;
 	translate.forEach(element => {
 		let speed = element.dataset.speed;
-		// if (element.classList.contains("center"))
-		// 	element.style.transform = `translate(-49%, ${scroll * speed}px)`;
-		// else
-			element.style.transform = `translateY(${scroll * speed}px)`;
+		element.style.transform = `translateY(${scroll * speed}px)`;
 	})
 })
