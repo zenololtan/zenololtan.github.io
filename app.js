@@ -1,5 +1,6 @@
 const translate = document.querySelectorAll(".translate");
-const header = document.getElementById("myHeader");
+const header = document.getElementsByTagName("header")[0];
+const child = document.getElementById("child");
 const mobile = isMobile();
 
 if (mobile == true) {
@@ -18,7 +19,7 @@ window.addEventListener('scroll', () =>{
 		editHeader(scroll);
 	if (scroll >= 986)
 		scroll -= 986;
-	console.log(scroll);
+	// console.log(scroll);
 	translate.forEach(element => {
 		let speed = element.dataset.speed;
 		element.style.transform = `translateY(${scroll * speed}px)`;
@@ -35,10 +36,10 @@ function isMobile(){
 
 function editHeader(scroll){
 	if (scroll > 2){
-		header.className = "onScroll";
+		child.className = "onScroll";
 		if (scroll >= 600)
-			header.className = "onNewSection";
+			child.className = "onNewSection";
 	}
 	else
-		header.className = "";
+		child.className = "vanilla";
 }

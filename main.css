@@ -37,7 +37,7 @@ section .container {
   position: relative;
 }
 
-header {
+.noMobile > div {
   position: fixed;
   top: 0;
   left: 0;
@@ -50,21 +50,16 @@ header {
   list-style: none;
   -webkit-transition: .5s;
   transition: .5s;
-  z-index: 99;
+  z-index: 30;
 }
 
-.logo {
-  float: left;
-  line-height: 30px;
-}
-
-header a {
+.noMobile div a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
 }
 
-header nav ul {
+.noMobile div nav ul {
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,16 +67,21 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li {
+.noMobile div nav ul li {
   line-height: 30px;
   padding: 0px 11px;
 }
 
-header nav ul li a {
+.noMobile div nav ul li a {
   display: inline-block;
 }
 
-header nav ul li a::after {
+.logo {
+  float: left;
+  line-height: 30px;
+}
+
+.noMobile div nav ul li a::after {
   content: '';
   display: block;
   width: 0;
@@ -91,18 +91,18 @@ header nav ul li a::after {
   transition: width .3s;
 }
 
-header nav ul li a:hover::after {
+.noMobile div nav ul li a:hover::after {
   width: 100%;
   -webkit-transition: width .3s;
   transition: width .3s;
 }
 
-.onScroll {
+.noMobile .onScroll {
   height: 50px;
   padding: 10px 100px;
 }
 
-.onNewSection {
+.noMobile .onNewSection {
   height: 50px;
   padding: 10px 100px;
   background: white;
