@@ -32,6 +32,7 @@ nav{
 		display: inline-block;
 	}
 }
+
 .mobile-dropdown-toggle{
 	float: right;
 	margin-right: 20px;
@@ -84,11 +85,60 @@ nav{
 
 	.mobile-dropdown-toggle{
 		display: initial;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		transition: all, .5s, ease-in-out;
+		// border: 2px solid black;
+	}
+
+	.menu-btn-brger{
+		width: 30px;
+		height: 3px;
+		background: black;
+		border-radius: 5px;
+		transition: all .5s ease-in-out;
+	}
+
+	.menu-btn-brger::before,
+	.menu-btn-brger::after{
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 3px;
+		background: black;
+		// border-radius: 1px;
+		transition: all .5s ease-in-out;
+		z-index: 99;
+	}
+	.menu-btn-brger::before{
+		transform: translateY(-7px);
+	}
+
+	.menu-btn-brger::after{
+		transform: translateY(7px);
+	}
+
+	nav.dropdown-opened .menu-btn-brger{
+		width: 0px;
+		background: transparent;
+	}
+
+	nav.dropdown-opened .menu-btn-brger::before{
+		transform: rotate(45deg) translate(-10px, 10px);
+	}
+
+	nav.dropdown-opened .menu-btn-brger::after{
+		transform: rotate(-45deg) translate(-10px, -10px);
 	}
 	
 	nav.dropdown-opened > .link-container{
-		opacity: 0.75;
-		transform: translateX(0);
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	.logo, .mobile-dropdown-toggle{
@@ -115,7 +165,7 @@ nav{
 		padding-right: 7vw;
 		background: white;
 		// anims
-		transform: translateX(100%);
+		transform: translateY(-100%);
 		transition: transform 0.2s, opacity 0.2s;
 		z-index: 95;
 	}

@@ -133,11 +133,65 @@ nav button {
   }
   .mobile-dropdown-toggle {
     display: initial;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-transition: all, .5s, ease-in-out;
+    transition: all, .5s, ease-in-out;
+  }
+  .menu-btn-brger {
+    width: 30px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn-brger::before,
+  .menu-btn-brger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: black;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    z-index: 99;
+  }
+  .menu-btn-brger::before {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  .menu-btn-brger::after {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  nav.dropdown-opened .menu-btn-brger {
+    width: 0px;
+    background: transparent;
+  }
+  nav.dropdown-opened .menu-btn-brger::before {
+    -webkit-transform: rotate(45deg) translate(-10px, 10px);
+            transform: rotate(45deg) translate(-10px, 10px);
+  }
+  nav.dropdown-opened .menu-btn-brger::after {
+    -webkit-transform: rotate(-45deg) translate(-10px, -10px);
+            transform: rotate(-45deg) translate(-10px, -10px);
   }
   nav.dropdown-opened > .link-container {
-    opacity: 0.75;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .logo, .mobile-dropdown-toggle {
     z-index: 99;
@@ -166,8 +220,8 @@ nav button {
     padding-left: 7vw;
     padding-right: 7vw;
     background: white;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
     transition: opacity 0.2s, -webkit-transform 0.2s;
     transition: transform 0.2s, opacity 0.2s;
