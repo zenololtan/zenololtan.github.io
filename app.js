@@ -18,10 +18,11 @@ document.addEventListener('scroll', () =>{
 });
 
 document.addEventListener("click", (event) => {
-	if (event.target.classList.contains("mobile-dropdown-toggle")){
+	// console.log(event.target.classList[0]);
+	if (event.target.classList.contains("mobile-dropdown-toggle") || event.target.classList.contains("menu-btn-brger")){
 		navElement.classList.toggle("dropdown-opened");
 	}
-	if (!event.target.classList.contains("mobile-dropdown-toggle") && !event.target.classList.contains("link-container")){
+	if (!event.target.classList.contains("mobile-dropdown-toggle") && !event.target.classList.contains("menu-btn-brger") && !event.target.classList.contains("link-container")){
 		navElement.classList.remove("dropdown-opened");
 	}
 });
