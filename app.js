@@ -3,17 +3,23 @@ const navElement = document.getElementById("main-nav");
 
 document.addEventListener('scroll', () =>{
 	let scroll = window.pageYOffset;
+	var offset = 0;
+	var newScroll
 
+	// console.log(scroll);
 	if (scroll < 0)
 		scroll = -1 * scroll;
 	if (window.innerWidth > 768)
 		editNav(scroll);
-	if (scroll >= 986)
-		scroll -= 986;
-	// console.log(scroll);
+	if (scroll >= 986 && scroll <= 1500)
+		offset = scroll;
+	if (scroll > 1500)
+		offset = 1500;
+	newScroll = scroll - offset;
+	console.log(newScroll);
 	translate.forEach(element => {
 		let speed = element.dataset.speed;
-		element.style.transform = `translateY(${scroll * speed}px)`;
+		element.style.transform = `translateY(${newScroll * speed}px)`;
 	})
 });
 
@@ -40,6 +46,8 @@ function editNav(scroll){
 		navElement.classList.add("onScroll");
 		if (scroll >= 500){
 			navElement.classList.add("onNewSection");
+		}else{
+			navElement.classList.remove("onNewSection");
 		}
 	}
 	else{

@@ -47,8 +47,6 @@ section .parallax{ //section/container
 	z-index: 3;
 }
 
-/*--------------------------------SECTION1 FOTO-------------------------------*/
-
 .p1bg{
 	position: absolute;
 	bottom: 0px;
@@ -56,23 +54,26 @@ section .parallax{ //section/container
 	height: 100%;
 }
 
+/*--------------------------------SECTION1 FOTO-------------------------------*/
+
 .p2background{
 	position: absolute;
-	height: 100%;
-	bottom: 0px;
+	right: 0;
+	bottom: -450px;
 	z-index: 1;
 }
 
 .p2middle{
 	position: absolute;
-	height: 100%;
-	bottom: 0px;
+	right: -40px;
+	// bottom: -610px;
+	bottom: -500px;
 	z-index: 2;
 }
 .p2foreground{
 	position: absolute;
-	height: 100%;
-	bottom: 53px;
+	right: -40px;
+	bottom: -500px;
 	z-index: 3;
 }
 
