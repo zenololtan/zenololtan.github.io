@@ -2,23 +2,27 @@ const translate = document.querySelectorAll(".translate");
 const navElement = document.getElementById("main-nav");
 
 document.addEventListener('scroll', () =>{
+	// let scroll = window.pageYOffset * (986 / window.innerHeight);
+	var pageOffset = window.innerHeight / 986; //986 = height of standart page
 	let scroll = window.pageYOffset;
 	var offset = 0;
 	var newScroll
 
-	console.log(scroll);
+	// console.log(scroll);
+	// console.log(window.innerHeight);
+	console.log(pageOffset);
 	if (scroll < 0)
 		scroll = -1 * scroll;
 	if (window.innerWidth > 768)
 		editNav(scroll);
-	if (scroll >= 986 && scroll <= 1500)
+	if (scroll >= 986 * pageOffset && scroll <= 1500 * pageOffset)
 		offset = scroll;
-	if (scroll > 1500)
-		offset = 1500;
-	if (scroll >= 2900 && scroll <= 2951)
+	if (scroll > 1500 * pageOffset)
+		offset = 1500 * pageOffset;
+	if (scroll >= 2900 * pageOffset && scroll <= 2951 * pageOffset)
 		scroll = 0;
-	if (scroll > 29511)
-		offset = 2951;
+	if (scroll > 29511 * pageOffset)
+		offset = 2951 * pageOffset;
 	newScroll = scroll - offset;
 	// console.log(newScroll);
 	translate.forEach(element => {
