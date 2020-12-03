@@ -310,26 +310,67 @@ section .parallax {
 /*--------------------------------SECTION1 FOTO-------------------------------*/
 .p2background {
   position: absolute;
-  right: 0;
+  left: 50%;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
   bottom: -450px;
   z-index: 1;
 }
 
 .p2middle {
   position: absolute;
-  right: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-58%);
+          transform: translateX(-58%);
   bottom: -500px;
   z-index: 2;
 }
 
 .p2foreground {
   position: absolute;
-  right: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-58%);
+          transform: translateX(-58%);
   bottom: -500px;
   z-index: 3;
 }
 
 .p2bg {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/*--------------------------------SECTION2 FOTO-------------------------------*/
+.p3background {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-48%);
+          transform: translateX(-48%);
+  bottom: -650px;
+  z-index: 1;
+}
+
+.p3middle {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-48%);
+          transform: translateX(-48%);
+  bottom: -650px;
+  z-index: 2;
+}
+
+.p3foreground {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -285px;
+  z-index: 3;
+}
+
+.p3bg {
   position: absolute;
   bottom: 0px;
   width: 100%;

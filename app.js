@@ -6,7 +6,7 @@ document.addEventListener('scroll', () =>{
 	var offset = 0;
 	var newScroll
 
-	// console.log(scroll);
+	console.log(scroll);
 	if (scroll < 0)
 		scroll = -1 * scroll;
 	if (window.innerWidth > 768)
@@ -15,8 +15,12 @@ document.addEventListener('scroll', () =>{
 		offset = scroll;
 	if (scroll > 1500)
 		offset = 1500;
+	if (scroll >= 2900 && scroll <= 2951)
+		scroll = 0;
+	if (scroll > 29511)
+		offset = 2951;
 	newScroll = scroll - offset;
-	console.log(newScroll);
+	// console.log(newScroll);
 	translate.forEach(element => {
 		let speed = element.dataset.speed;
 		element.style.transform = `translateY(${newScroll * speed}px)`;
