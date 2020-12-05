@@ -27,7 +27,7 @@ document.addEventListener('scroll', () =>{
 	// console.log(newScroll);
 	translate.forEach(element => {
 		let speed = element.dataset.speed;
-		element.style.transform = `translateY(${newScroll * speed}px)`;
+		element.style.transform = `translateY(${newScroll * speed / pageOffset}px)`;
 	})
 });
 
